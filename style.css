@@ -1,0 +1,84 @@
+/* Shellback Labs site. Plain CSS: system fonts, light and dark from the reader's settings. */
+
+:root {
+  --bg: #fbfaf8;
+  --text: #1c1c1e;
+  --muted: #5d5d63;
+  --rule: #e4e1db;
+  --accent: #0e6ba8;
+  --card: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0c;
+    --text: #f2f2f4;
+    --muted: #a1a1a8;
+    --rule: #2c2c2e;
+    --accent: #4ea3e0;
+    --card: #1c1c1e;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+header.site {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 20px 0;
+  font-size: 15px;
+}
+
+header.site a { color: var(--muted); text-decoration: none; }
+header.site a:hover { color: var(--text); }
+
+h1 { font-size: 34px; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font-size: 21px; margin: 36px 0 8px; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+a { color: var(--accent); }
+
+.lede { font-size: 19px; color: var(--muted); }
+.meta { color: var(--muted); font-size: 15px; }
+
+pre.mark {
+  margin: 0 0 28px;
+  font: 13px/1.25 ui-monospace, "SF Mono", Menlo, monospace;
+  color: var(--muted);
+  overflow-x: auto;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin: 24px 0;
+}
+
+.card h2 { margin-top: 0; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 48px;
+  padding-top: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
